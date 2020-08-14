@@ -1,22 +1,35 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
 body{
     /* Background pattern from Toptal Subtle Patterns */
     background-image: url(./images/green-fibers.png);
 }
 
-nav{
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    margin-top: 20px;
+nav .navbar-brand{
+    font-size: 28px;
+    margin-left: 10px;
 }
 
-.navigation{
-    position: relative;
+nav{
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.7);
+    top: 0;
+    margin-top: 20px;
     width: 100%;
-    height: 100vh;
+}
+
+nav a, nav button span{
+    color: black;
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-style: initial;
+}
+
+#mainVideo{
+    position: fixed;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-size: cover;
+    top: 0;
+    min-width: 100%;
 }
