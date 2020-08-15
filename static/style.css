@@ -1,15 +1,18 @@
-html {
-    scroll-behavior: smooth;
-  }
-  
-body{
+body, html, .main {
     /* Background pattern from Toptal Subtle Patterns */
     background-image: url(./images/green-fibers.png);
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+section{
+    min-height: 100%;
 }
 
 nav .navbar-brand{
     font-size: 28px;
     margin-left: 10px;
+    font-weight: lighter;
 }
 
 nav{
@@ -17,19 +20,51 @@ nav{
     background-color: rgb(255, 255, 255, 0.7);
     top: 0;
     margin-top: 20px;
-    width: 100%;
 }
 
-nav a, nav button span{
+nav a, .navbar-toggler-icon{
     color: black;
     font-family: 'Lora', serif;
-    font-size: 24px;
-    font-style: initial;
+    font-size: 20px;
+    font-weight: 100;
 }
 
 #mainVideo{
-    position: fixed;
+    position: absolute;
     display: flex;
     top: 0;
     min-width: 100%;
+    
+}
+
+/* topButton */
+#topButton{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 2em;
+    background-color: #FF9800;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+
+#button:active {
+    background-color: #555;
+  }
+
+#topButton:hover{
+    cursor: pointer;
+}
+
+#topButton.show{
+    opacity: 1;
+    visibility: visible;
 }
